@@ -154,7 +154,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ============================================
+// PACKAGES SECTION - EXPAND/COLLAPSE FUNCTIONALITY
+// ============================================
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all package cards
+    const packageCards = document.querySelectorAll('.package-card');
+    
+    // Loop through each card and add click functionality to expand button
+    packageCards.forEach(card => {
+        const expandBtn = card.querySelector('.expand-btn');
+        
+        if (expandBtn) {
+            expandBtn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent any parent click events
+                
+                // Get current expanded state
+                const isExpanded = card.getAttribute('data-expanded') === 'true';
+                
+                // Toggle the expanded state
+                if (isExpanded) {
+                    // Collapse the card
+                    card.setAttribute('data-expanded', 'false');
+                    expandBtn.innerHTML = 'READ MORE <i class="fas fa-chevron-down expand-icon"></i>';
+                } else {
+                    // Expand the card
+                    card.setAttribute('data-expanded', 'true');
+                    expandBtn.innerHTML = 'READ LESS <i class="fas fa-chevron-up expand-icon"></i>';
+                    
+                    // Optional: Smooth scroll to the expanded card
+                    setTimeout(() => {
+                        const cardRect = card.getBoundingClientRect();
+                        const isVisible = (cardRect.top >= 0 && cardRect.bottom <= window.innerHeight);
+                        
+                        if (!isVisible) {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+            });
+        }
+        
+        // Optional: Close expanded card when clicking outside (if needed)
+        // This is commented out to keep functionality simple
+    });
+    
+    // Optional: Ensure that when one card expands, others can remain expanded
+    // This allows multiple cards to be expanded at once
+    console.log('Expand/collapse functionality initialized');
+});
 /* ==========================================================
    3. BUTTON HOVER ANIMATIONS
    Slides the arrow icon right on hover for all CTA buttons.

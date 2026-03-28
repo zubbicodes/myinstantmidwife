@@ -136,7 +136,7 @@
                     <div class="social-icons">
                         <a href="#" class="social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-circle" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-circle" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
