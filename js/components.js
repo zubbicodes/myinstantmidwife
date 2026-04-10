@@ -52,12 +52,13 @@
             <li><a href="${pagesDir}testimonials.html" class="${activePage === 'testimonials' ? 'active' : ''}">TESTIMONIALS</a></li>
             <li><a href="${pagesDir}faq.html" class="${activePage === 'faq' ? 'active' : ''}">FAQ'S</a></li>
             <li><a href="${pagesDir}contact.html" class="${activePage === 'contact' ? 'active' : ''}">CONTACT US</a></li>
+            <li><a href="${pagesDir}subscription.html" class="${activePage === 'subscription' ? 'active' : ''}">SUBSCRIPTION</a></li>
         </ul>
 
         <!-- Search & Book Now CTA -->
         <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="#" style="color: var(--text-dark); font-size: 18px;"><i class="fas fa-search"></i></a>
-            <a href="${pagesDir}contact.html" class="book-now-btn">BOOK NOW <i class="fas fa-arrow-right diag-icon"></i></a>
+            <a href="#" style="color: var(--text-dark); font-size: 18px;"></a>
+            <a href="${pagesDir}subscription.html" class="book-now-btn">BOOK NOW <i class="fas fa-arrow-right diag-icon"></i></a>
         </div>
 
         <!-- Mobile Hamburger Button (hidden on desktop) -->
@@ -111,6 +112,10 @@
                     <li><a href="${pagesDir}testimonials.html">Testimonials</a></li>
                     <li><a href="${pagesDir}faq.html">FAQ's</a></li>
                     <li><a href="${pagesDir}contact.html">Contact Us</a></li>
+                     <li><a href="${pagesDir}subscription.html">Subscription</a></li>
+                      <li><a href="${pagesDir}terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="${pagesDir}privacy-policy.html">Privacy Policy</a></li>
+
                 </ul>
             </div>
 
@@ -146,8 +151,14 @@
         <div class="copyright">
             <span>Copyright &copy; 2026. My Instant Midwife. All rights reserved.</span>
             <div class="copyright-links">
-                <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms & Conditions</a>
+              <a href="/pages/privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;  <a href="/pages/terms-conditions.html">Terms & Conditions</a>
             </div>
+              
+   
+  
+       
+   
+
         </div>
     </footer>
     `;
